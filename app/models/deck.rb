@@ -10,7 +10,8 @@ class Deck < ApplicationRecord
     end
     shuffle
   end
-   def each(&block)
+
+  def each(&block)
     @cards.each(&block)
   end
 
@@ -36,14 +37,5 @@ class Deck < ApplicationRecord
       hand1.add_card(draw!)
       hand2.add_card(draw!)
     end
-  end
-end
-
-class Card
-  attr_reader :suite, :rank
-
-  def initialize(suite, rank)
-    @suite = suite
-    @rank = rank
   end
 end

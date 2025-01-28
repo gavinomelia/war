@@ -7,4 +7,8 @@ class Hand < ApplicationRecord
   def add_card(card)
     @cards << card
   end
+
+  def size
+    @cards.size
+  end
 end
