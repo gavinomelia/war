@@ -21,9 +21,9 @@ RSpec.describe Deck, type: :model do
 
   it "can deal the cards" do
     deck = Deck.new
-    # hand = Hand.new
-    deck.deal
-    # expect(hand.size).to eq(26)
+    hand1, hand2 = deck.deal
+    expect(hand1.size).to eq(26)
+    expect(hand2.size).to eq(26)
     expect(deck.size).to eq(0)
   end
 end

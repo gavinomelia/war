@@ -5,7 +5,9 @@ class Hand < ApplicationRecord
   end
 
   def add_card(card)
-    @cards << card
+    if card
+      @cards << card
+    end
   end
 
   def size
